@@ -1,6 +1,6 @@
 {
   "name": "create-djl-vue-ts",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "scripts": {
     "check": "bunx @biomejs/biome check --write ./bin --vcs-enabled=false"
