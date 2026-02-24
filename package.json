@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "check": "bunx @biomejs/biome check . --write"
+    "check": "bunx @biomejs/biome check --write ./bin --vcs-enabled=false"
   },
   "bin": {
     "create-djl-vue-ts": "bin/index.mjs"
