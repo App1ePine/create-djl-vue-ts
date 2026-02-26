@@ -11,8 +11,11 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      '/api': {
+      '/py-api': {
         target: 'http://localhost:8000',
+        pathRewrite: {
+          '^/py-api': '',
+        },
         changeOrigin: true,
       },
     },
