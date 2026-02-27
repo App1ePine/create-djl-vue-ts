@@ -1,7 +1,6 @@
 export interface Result {
   code: number;
-  message: string;
-  success?: boolean;
+  msg: string;
 }
 
 // biome-ignore lint/suspicious/noExplicitAny: <no reason>
