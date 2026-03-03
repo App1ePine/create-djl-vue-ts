@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import ComponentsView from './index.vue';
+import ComponentsView from './index.vue'
 </script>
 
 <template>

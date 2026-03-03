@@ -1,8 +1,8 @@
-import { defineConfig } from '@rsbuild/core';
-import { pluginVue } from '@rsbuild/plugin-vue';
-import AutoImport from 'unplugin-auto-import/rspack';
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
-import Components from 'unplugin-vue-components/rspack';
+import { defineConfig } from '@rsbuild/core'
+import { pluginVue } from '@rsbuild/plugin-vue'
+import AutoImport from 'unplugin-auto-import/rspack'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import Components from 'unplugin-vue-components/rspack'
 
 // Docs: https://rsbuild.rs/config/
 export default defineConfig({
@@ -38,4 +38,4 @@ export default defineConfig({
       },
     },
   },
-});
+})

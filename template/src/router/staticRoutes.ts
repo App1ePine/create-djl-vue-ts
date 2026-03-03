@@ -1,4 +1,4 @@
-import type { RouteRecordRaw } from 'vue-router';
+import type { RouteRecordRaw } from 'vue-router'
 
 export const staticRoutes: RouteRecordRaw[] = [
   {
@@ -10,4 +10,4 @@ export const staticRoutes: RouteRecordRaw[] = [
     name: 'demo',
     component: () => import('@/views/demo/index1.vue'),
   },
-];
+]
