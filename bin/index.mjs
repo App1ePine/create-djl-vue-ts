@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { cpSync, existsSync, readFileSync, writeFileSync } from 'node:fs'
+import { cpSync, existsSync, readFileSync, renameSync, writeFileSync } from 'node:fs'
 import { dirname, join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -15,6 +15,12 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const templateDir = resolve(__dirname, '../template')
 
 cpSync(templateDir, targetDir, { recursive: true })
+
+const dotGitignorePath = join(targetDir, '.gitignore')
+const gitignorePath = join(targetDir, 'gitignore')
+if (!existsSync(dotGitignorePath) && existsSync(gitignorePath)) {
+  renameSync(gitignorePath, dotGitignorePath)
+}
 
 const pkgPath = join(targetDir, 'package.json')
 const pkg = JSON.parse(readFileSync(pkgPath, 'utf-8'))
